@@ -193,6 +193,7 @@ body {
   color: var(--pink);
   font-family: "Sacramento";
   font-size: 5rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
 }
 
@@ -360,7 +361,6 @@ body {
 .gifts p {
   font-size: 1rem;
   font-weight: 300;
-  margin: 3rem;
   line-height: 2;
 }
 
@@ -881,12 +881,26 @@ footer li {
   }
 
   .home h2 {
-    font-size: 2.2rem;
+    font-size: 3rem;
+  }
+
+  .home .couple h3 {
+    font-size: 2rem;
+    margin-top: 20px;
+    letter-spacing: 0.2rem;
+  }
+
+  .rsvp .container h2 {
+    font-size: 3rem;
+  }
+
+  .info .container h2 {
+    font-size: 3rem;
   }
 
   .simply-countdown > .simply-section {
     padding: 35px;
-    margin: 3px;
+    margin: 6px;
   }
 
   .timeline li .timeline-image {
