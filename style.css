@@ -23,6 +23,28 @@ body {
   z-index: -1;
   filter: grayscale();
 }
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
 .hero {
   position: relative;
@@ -34,14 +56,23 @@ body {
 .hero p {
   text-shadow: var(--shadow);
 }
+.hero .display-tc h4 span {
+  font-weight: bold;
+  margin: 20px 0;
+  text-shadow: var(--shadow);
+  animation: fadeInUp 1.8s ease-out;
+}
 
 .hero h1 {
   font-family: "Sacramento", cursive;
+  animation: fadeInUp 1.5s ease-out;
+
   font-size: 6rem;
 }
 
 .hero h4 {
   font-size: 1.6rem;
+  animation: fadeInUp 1s ease-out;
 }
 
 .hero .custom-invite {
@@ -51,12 +82,14 @@ body {
 
 .hero p {
   font-size: 1rem;
+  animation: fadeInUp 2s ease-out;
 }
 
 .hero a {
   color: var(--pink);
   background-color: white;
   box-shadow: var(--shadow);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero a:hover {
@@ -93,11 +126,64 @@ body {
   padding-bottom: 5rem;
 }
 
+/* Keyframes for animations */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animations to elements */
+.home h2,
+.home p,
+.home h3,
+.home img {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.home h1 {
+  animation: slideInFromRight 1s ease-in;
+  font-family: "Sacramento";
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .home h2 {
   color: var(--pink);
   font-family: "Sacramento";
   font-size: 4rem;
   font-weight: bold;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .info h2,
@@ -115,11 +201,15 @@ body {
   color: #444;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  animation: fadeIn 1.5s forwards;
+  animation-delay: 1.5s;
 }
 
 .home p {
   font-size: 1.1rem;
   color: #666;
+  animation: fadeIn 1.5s forwards;
+  animation-delay: 1s;
 }
 
 .home .couple {
@@ -134,6 +224,8 @@ body {
 }
 
 .home .couple img {
+  animation: fadeIn 1.5s forwards;
+  animation-delay: 2s;
   width: 100%;
 }
 
