@@ -875,15 +875,15 @@ footer li {
 /* mobile phone */
 @media (max-width: 576px) {
   html {
-    font-size: 65%;
+    font-size: 60%;
   }
 
   .home h2 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .simply-countdown > .simply-section {
-    padding: 45px;
+    padding: 40px;
     margin: 3px;
   }
 
