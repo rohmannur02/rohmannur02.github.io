@@ -66,7 +66,6 @@ body {
 .hero h1 {
   font-family: "Sacramento", cursive;
   animation: fadeInUp 1.5s ease-out;
-
   font-size: 6rem;
 }
 
